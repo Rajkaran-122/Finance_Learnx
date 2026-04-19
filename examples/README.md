@@ -1,4 +1,4 @@
-## FinRL Stock Trading 2026 Tutorial
+## FLX Stock Trading 2026 Tutorial
 
 ### Step 1: Set Up the Environment
 
@@ -13,7 +13,7 @@ pip install -e .
 ### Step 2: Download & Preprocess Data
 
 ```bash
-python examples/FinRL_StockTrading_2026_1_data.py
+python examples/FLX_StockTrading_2026_1_data.py
 ```
 
 This script downloads DOW 30 stock data from Yahoo Finance, adds technical indicators (MACD, RSI, etc.), VIX, and turbulence index, then splits the data into training set (2014–2025) and trading set (2026-01-01 to 2026-03-20), saving them as `train_data.csv` and `trade_data.csv`.
@@ -21,7 +21,7 @@ This script downloads DOW 30 stock data from Yahoo Finance, adds technical indic
 ### Step 3: Train DRL Agents
 
 ```bash
-python examples/FinRL_StockTrading_2026_2_train.py
+python examples/FLX_StockTrading_2026_2_train.py
 ```
 
 This script trains 5 DRL agents (A2C, DDPG, PPO, TD3, SAC) using Stable Baselines 3 on the training data. Trained models are saved to the `trained_models/` directory.
@@ -38,7 +38,7 @@ This script trains 5 DRL agents (A2C, DDPG, PPO, TD3, SAC) using Stable Baseline
 ### Step 4: Backtest
 
 ```bash
-python examples/FinRL_StockTrading_2026_3_Backtest.py
+python examples/FLX_StockTrading_2026_3_Backtest.py
 ```
 
 This script loads the trained agents, runs them on the trading data, and compares their performance against two baselines: Mean Variance Optimization (MVO) and the DJIA index. Results are printed to the console and a plot is saved as `backtest_result.png`.

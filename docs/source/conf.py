@@ -17,12 +17,12 @@ import sys
 import sphinx_rtd_theme
 
 sys.path.insert(0, os.path.abspath("../../"))
-sys.path.insert(0, os.path.abspath(os.path.join("../..", "finrl")))  # Important
+sys.path.insert(0, os.path.abspath(os.path.join("../..", "flx")))  # Important
 
 
 # -- Project information -----------------------------------------------------
 
-project = "FinRL"
+project = "FLX"
 copyright = "2026, Digital Metro"
 author = "Digital Metro"
 
@@ -131,7 +131,7 @@ html_static_path = ["_static"]
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "FinRLdoc"
+htmlhelp_basename = "FLXdoc"
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -155,7 +155,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "FinRL.tex", "FinRL Documentation", "FinRL", "manual"),
+    (master_doc, "FLX.tex", "FLX Documentation", "FLX", "manual"),
 ]
 
 
@@ -163,7 +163,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "finrl", "FinRL Documentation", [author], 1)]
+man_pages = [(master_doc, "flx", "FLX Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -174,10 +174,10 @@ man_pages = [(master_doc, "finrl", "FinRL Documentation", [author], 1)]
 texinfo_documents = [
     (
         master_doc,
-        "FinRL",
-        "FinRL Documentation",
+        "FLX",
+        "FLX Documentation",
         author,
-        "FinRL",
+        "FLX",
         "One line description of project.",
         "Miscellaneous",
     ),

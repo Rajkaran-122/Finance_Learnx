@@ -4,7 +4,7 @@ Stock NeurIPS2018 Part 2. Train
 This series is a reproduction of paper "Deep reinforcement learning for
 automated stock trading: An ensemble strategy".
 
-Introduce how to use FinRL to make data into the gym form environment, and train DRL agents on it.
+Introduce how to use FLX to make data into the gym form environment, and train DRL agents on it.
 """
 
 from __future__ import annotations
@@ -12,12 +12,12 @@ from __future__ import annotations
 import pandas as pd
 from stable_baselines3.common.logger import configure
 
-from finrl.agents.stablebaselines3.models import DRLAgent
-from finrl.config import INDICATORS
-from finrl.config import RESULTS_DIR
-from finrl.config import TRAINED_MODEL_DIR
-from finrl.main import check_and_make_directories
-from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from flx.agents.stablebaselines3.models import DRLAgent
+from flx.config import INDICATORS
+from flx.config import RESULTS_DIR
+from flx.config import TRAINED_MODEL_DIR
+from flx.main import check_and_make_directories
+from flx.meta.env_stock_trading.env_stocktrading import StockTradingEnv
 
 # %% Part 1. Prepare directories
 
@@ -70,7 +70,7 @@ if if_using_a2c:
     model_a2c.set_logger(new_logger_a2c)
 
 trained_a2c = (
-    agent.train_model(model=model_a2c, tb_log_name="a2c", total_timesteps=20000)
+    agent.train_model(model=model_a2c, tb_log_name="a2c", total_timesteps=1000)
     if if_using_a2c
     else None
 )
@@ -86,7 +86,7 @@ if if_using_ddpg:
     model_ddpg.set_logger(new_logger_ddpg)
 
 trained_ddpg = (
-    agent.train_model(model=model_ddpg, tb_log_name="ddpg", total_timesteps=20000)
+    agent.train_model(model=model_ddpg, tb_log_name="ddpg", total_timesteps=1000)
     if if_using_ddpg
     else None
 )
@@ -108,7 +108,7 @@ if if_using_ppo:
     model_ppo.set_logger(new_logger_ppo)
 
 trained_ppo = (
-    agent.train_model(model=model_ppo, tb_log_name="ppo", total_timesteps=20000)
+    agent.train_model(model=model_ppo, tb_log_name="ppo", total_timesteps=1000)
     if if_using_ppo
     else None
 )
@@ -129,7 +129,7 @@ if if_using_td3:
     model_td3.set_logger(new_logger_td3)
 
 trained_td3 = (
-    agent.train_model(model=model_td3, tb_log_name="td3", total_timesteps=20000)
+    agent.train_model(model=model_td3, tb_log_name="td3", total_timesteps=1000)
     if if_using_td3
     else None
 )
@@ -152,7 +152,7 @@ if if_using_sac:
     model_sac.set_logger(new_logger_sac)
 
 trained_sac = (
-    agent.train_model(model=model_sac, tb_log_name="sac", total_timesteps=20000)
+    agent.train_model(model=model_sac, tb_log_name="sac", total_timesteps=1000)
     if if_using_sac
     else None
 )

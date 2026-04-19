@@ -1,27 +1,27 @@
-:github_url: https://github.com/DigitalMetro/FinRL-Library
+:github_url: https://github.com/DigitalMetro/FLX-Library
 
 Portfolio Allocation
 ===================================
 
 **Our paper**:
-`FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance`_.
+`FLX: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance`_.
 
-.. _FinRL\: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance: https://arxiv.org/abs/2011.09607
+.. _FLX\: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance: https://arxiv.org/abs/2011.09607
 
 Presented at NeurIPS 2020: Deep RL Workshop.
 
 The Jupyter notebook codes are available on our Github_ and `Google Colab`_.
 
-.. _Github: https://github.com/DigitalMetro/FinRL-Library
-.. _Google Colab: https://colab.research.google.com/github/DigitalMetro/FinRL-Library/blob/master/FinRL_multiple_stock_trading.ipynb
+.. _Github: https://github.com/DigitalMetro/FLX-Library
+.. _Google Colab: https://colab.research.google.com/github/DigitalMetro/FLX-Library/blob/master/FLX_multiple_stock_trading.ipynb
 
 .. tip::
 
-    - FinRL `Single Stock Trading <https://colab.research.google.com/github/DigitalMetro/FinRL-Library/blob/master/FinRL_single_stock_trading.ipynb>`_ at Google Colab.
+    - FLX `Single Stock Trading <https://colab.research.google.com/github/DigitalMetro/FLX-Library/blob/master/FLX_single_stock_trading.ipynb>`_ at Google Colab.
 
-    - FinRL `Multiple Stocks Trading <https://colab.research.google.com/github/DigitalMetro/FinRL-Library/blob/master/FinRL_multiple_stock_trading.ipynb>`_ at Google Colab:
+    - FLX `Multiple Stocks Trading <https://colab.research.google.com/github/DigitalMetro/FLX-Library/blob/master/FLX_multiple_stock_trading.ipynb>`_ at Google Colab:
 
-Check our previous tutorials: `Single Stock Trading <https://finance-pro.readthedocs.io/en/latest/tutorial/SingleStockTrading.html>`_ and `Multiple Stock Trading <https://finance-pro.readthedocs.io/en/latest/tutorial/MultipleStockTrading.html>`_ for detailed explanation of the FinRL architecture and modules.
+Check our previous tutorials: `Single Stock Trading <https://finance-pro.readthedocs.io/en/latest/tutorial/SingleStockTrading.html>`_ and `Multiple Stock Trading <https://finance-pro.readthedocs.io/en/latest/tutorial/MultipleStockTrading.html>`_ for detailed explanation of the FLX architecture and modules.
 
 
 
@@ -45,7 +45,7 @@ The traditional and the most popular way of doing portfolio allocation is mean-v
 
 However, MPT performs not so well in out-of-sample data. MPT is calculated only based on stock returns, if we want to take other relevant factors into account, for example some of the technical indicators like MACD or RSI, MPT may not be able to combine these information together well.
 
-We introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative finance. FinRL is a DRL library designed specifically for automated stock trading with an effort for educational and demonstrative purpose.
+We introduce a DRL library FLX that facilitates beginners to expose themselves to quantitative finance. FLX is a DRL library designed specifically for automated stock trading with an effort for educational and demonstrative purpose.
 
 This article is focusing on one of the use cases in our paper: Portfolio Allocation. We use one Jupyter notebook to include all the necessary steps.
 
@@ -77,13 +77,13 @@ We also assume no transaction cost, because we are trying to make a simple portf
 Load Python Packages
 --------------------------
 
-Install the unstable development version of FinRL:
+Install the unstable development version of FLX:
 
 .. code-block:: python
    :linenos:
 
     # Install the unstable development version in Jupyter notebook:
-    !pip install git+https://github.com/DigitalMetro/FinRL-Library.git
+    !pip install git+https://github.com/DigitalMetro/FLX-Library.git
 
 
 Import Packages:
@@ -99,17 +99,17 @@ Import Packages:
     matplotlib.use('Agg')
     import datetime
 
-    from finrl import config
-    from finrl import config_tickers
-    from finrl.marketdata.yahoodownloader import YahooDownloader
-    from finrl.preprocessing.preprocessors import FeatureEngineer
-    from finrl.preprocessing.data import data_split
-    from finrl.env.environment import EnvSetup
-    from finrl.env.EnvMultipleStock_train import StockEnvTrain
-    from finrl.env.EnvMultipleStock_trade import StockEnvTrade
-    from finrl.model.models import DRLAgent
-    from finrl.trade.backtest import BackTestStats, BaselineStats, BackTestPlot, backtest_strat, baseline_strat
-    from finrl.trade.backtest import backtest_strat, baseline_strat
+    from flx import config
+    from flx import config_tickers
+    from flx.marketdata.yahoodownloader import YahooDownloader
+    from flx.preprocessing.preprocessors import FeatureEngineer
+    from flx.preprocessing.data import data_split
+    from flx.env.environment import EnvSetup
+    from flx.env.EnvMultipleStock_train import StockEnvTrain
+    from flx.env.EnvMultipleStock_trade import StockEnvTrade
+    from flx.model.models import DRLAgent
+    from flx.trade.backtest import BackTestStats, BaselineStats, BackTestPlot, backtest_strat, baseline_strat
+    from flx.trade.backtest import backtest_strat, baseline_strat
 
     import os
     if not os.path.exists("./" + config.DATA_SAVE_DIR):
@@ -126,7 +126,7 @@ Import Packages:
 Download Data
 --------------------------
 
-FinRL uses a YahooDownloader class to extract data.
+FLX uses a YahooDownloader class to extract data.
 
 .. code-block:: python
 
@@ -163,7 +163,7 @@ Download and save the data in a pandas DataFrame:
 Preprocess Data
 --------------------------
 
-FinRL uses a FeatureEngineer class to preprocess data.
+FLX uses a FeatureEngineer class to preprocess data.
 
 .. code-block:: python
 
@@ -223,7 +223,7 @@ Perform Feature Engineering: covariance matrix + technical indicators:
 Build Environment
 --------------------------
 
-FinRL uses a EnvSetup class to setup environment.
+FLX uses a EnvSetup class to setup environment.
 
 
 .. code-block:: python
@@ -488,7 +488,7 @@ Implement DRL Algorithms
 --------------------------
 
 
-FinRL uses a DRLAgent class to implement the algorithms.
+FLX uses a DRLAgent class to implement the algorithms.
 
 .. code-block:: python
 
@@ -546,7 +546,7 @@ The output actions or the portfolio weights look like this:
 Backtesting Performance
 --------------------------
 
-FinRL uses a set of functions to do the backtesting with Quantopian pyfolio.
+FLX uses a set of functions to do the backtesting with Quantopian pyfolio.
 
 .. code-block:: python
    :linenos:

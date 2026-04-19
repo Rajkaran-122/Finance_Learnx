@@ -3,7 +3,7 @@ Stock NeurIPS2018 Part 1. Data
 
 This series is a reproduction of paper "Deep reinforcement learning for automated stock trading: An ensemble strategy".
 
-Introduce how to use FinRL to fetch and process data that we need for ML/RL trading.
+Introduce how to use FLX to fetch and process data that we need for ML/RL trading.
 """
 
 from __future__ import annotations
@@ -13,15 +13,15 @@ import itertools
 import pandas as pd
 import yfinance as yf
 
-from finrl import config_tickers
-from finrl.config import INDICATORS
-from finrl.config import TRADE_END_DATE
-from finrl.config import TRADE_START_DATE
-from finrl.config import TRAIN_END_DATE
-from finrl.config import TRAIN_START_DATE
-from finrl.meta.preprocessor.preprocessors import data_split
-from finrl.meta.preprocessor.preprocessors import FeatureEngineer
-from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
+from flx import config_tickers
+from flx.config import INDICATORS
+from flx.config import TRADE_END_DATE
+from flx.config import TRADE_START_DATE
+from flx.config import TRAIN_END_DATE
+from flx.config import TRAIN_START_DATE
+from flx.meta.preprocessor.preprocessors import data_split
+from flx.meta.preprocessor.preprocessors import FeatureEngineer
+from flx.meta.preprocessor.yahoodownloader import YahooDownloader
 
 # %% Part 1. Fetch data - Single ticker
 
@@ -30,14 +30,14 @@ aapl_df_yf = yf.download(tickers="aapl", start="2020-01-01", end="2020-01-31")
 print("=== yfinance download ===")
 print(aapl_df_yf.head())
 
-# Using FinRL's YahooDownloader
-aapl_df_finrl = YahooDownloader(
+# Using FLX's YahooDownloader
+aapl_df_flx = YahooDownloader(
     start_date="2020-01-01",
     end_date="2020-01-31",
     ticker_list=["aapl"],
 ).fetch_data()
-print("\n=== FinRL YahooDownloader ===")
-print(aapl_df_finrl.head())
+print("\n=== FLX YahooDownloader ===")
+print(aapl_df_flx.head())
 
 # %% Part 2. Fetch data - DOW 30 tickers
 

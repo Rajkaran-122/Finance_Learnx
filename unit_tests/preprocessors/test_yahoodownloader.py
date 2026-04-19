@@ -5,7 +5,7 @@ import unittest
 import pandas as pd
 from pandas.testing import assert_frame_equal
 
-from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
+from flx.meta.preprocessor.yahoodownloader import YahooDownloader
 
 
 class TestYahooDownloaderAdjustPrices(unittest.TestCase):

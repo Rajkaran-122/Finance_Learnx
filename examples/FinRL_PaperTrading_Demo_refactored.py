@@ -1,6 +1,6 @@
 # Disclaimer: Nothing herein is financial advice, and NOT a recommendation to trade real money. Many platforms exist for simulated trading (paper trading) which can be used for building and developing the methods discussed. Please use common sense and always first consult a professional before trading or investing.
-# install finrl library
-# %pip install --upgrade git+https://github.com/DigitalMetro/FinRL.git
+# install flx library
+# %pip install --upgrade git+https://github.com/DigitalMetro/FLX.git
 # Alpaca keys
 from __future__ import annotations
 
@@ -28,13 +28,13 @@ print("TRADING_API_KEY: ", TRADING_API_KEY)
 print("TRADING_API_SECRET: ", TRADING_API_SECRET)
 print("TRADING_API_BASE_URL: ", TRADING_API_BASE_URL)
 
-from finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
-from finrl.meta.paper_trading.alpaca import PaperTradingAlpaca
-from finrl.meta.paper_trading.common import train, test, alpaca_history, DIA_history
-from finrl.config import INDICATORS
+from flx.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
+from flx.meta.paper_trading.alpaca import PaperTradingAlpaca
+from flx.meta.paper_trading.common import train, test, alpaca_history, DIA_history
+from flx.config import INDICATORS
 
 # Import Dow Jones 30 Symbols
-from finrl.config_tickers import DOW_30_TICKER
+from flx.config_tickers import DOW_30_TICKER
 
 ticker_list = DOW_30_TICKER
 env = StockTradingEnv

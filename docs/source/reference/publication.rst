@@ -12,29 +12,29 @@ Papers by the Columbia research team can be found at `Google Scholar <https://sc
      - Link
      - Citations
      - Year
-   * - **FinRL-Meta**: A Universe of Near-Real Market Environments for Data-Driven Deep Reinforcement Learning in Quantitative Finance
+   * - **FLX-Meta**: A Universe of Near-Real Market Environments for Data-Driven Deep Reinforcement Learning in Quantitative Finance
      - NeurIPS 2021 Data-Centric AI Workshop
-     - `paper <https://arxiv.org/abs/2112.06753>`_, `code <https://github.com/DigitalMetro/FinRL-Meta>`_
+     - `paper <https://arxiv.org/abs/2112.06753>`_, `code <https://github.com/DigitalMetro/FLX-Meta>`_
      - 2
      - 2021
    * - Explainable deep reinforcement learning for portfolio management: An empirical approach
      - ICAIF 2021: ACM International Conference on AI in Finance
-     - `paper <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3958005>`_, `code <https://github.com/DigitalMetro/FinRL>`_
+     - `paper <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3958005>`_, `code <https://github.com/DigitalMetro/FLX>`_
      - 1
      - 2021
-   * - **FinRL-Podracer**: High performance and scalable deep reinforcement learning for quantitative finance
+   * - **FLX-Podracer**: High performance and scalable deep reinforcement learning for quantitative finance
      - ICAIF 2021: ACM International Conference on AI in Finance
-     - `paper <https://arxiv.org/abs/2111.05188>`_, `code <https://github.com/DigitalMetro/FinRL_Podracer>`_
+     - `paper <https://arxiv.org/abs/2111.05188>`_, `code <https://github.com/DigitalMetro/FLX_Podracer>`_
      - 2
      - 2021
-   * - **FinRL**: Deep reinforcement learning framework to automate trading in quantitative finance
+   * - **FLX**: Deep reinforcement learning framework to automate trading in quantitative finance
      - ICAIF 2021: ACM International Conference on AI in Finance
-     - `paper <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3955949>`_, `code <https://github.com/DigitalMetro/FinRL>`_
+     - `paper <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3955949>`_, `code <https://github.com/DigitalMetro/FLX>`_
      - 7
      - 2021
-   * - **FinRL**: A deep reinforcement learning library for automated stock trading in quantitative finance
+   * - **FLX**: A deep reinforcement learning library for automated stock trading in quantitative finance
      - NeurIPS 2020 Deep RL Workshop
-     - `paper <https://arxiv.org/abs/2011.09607>`_, `code <https://github.com/DigitalMetro/FinRL>`_
+     - `paper <https://arxiv.org/abs/2011.09607>`_, `code <https://github.com/DigitalMetro/FLX>`_
      - 25
      - 2020
    * - Deep reinforcement learning for automated stock trading: An ensemble strategy

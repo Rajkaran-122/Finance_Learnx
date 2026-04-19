@@ -18,10 +18,10 @@ import numpy as np
 import pandas as pd
 from stable_baselines3 import A2C, DDPG, PPO, SAC, TD3
 
-from finrl.agents.stablebaselines3.models import DRLAgent
-from finrl.config import INDICATORS, TRAINED_MODEL_DIR, TRADE_START_DATE, TRADE_END_DATE
-from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
+from flx.agents.stablebaselines3.models import DRLAgent
+from flx.config import INDICATORS, TRAINED_MODEL_DIR, TRADE_START_DATE, TRADE_END_DATE
+from flx.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from flx.meta.preprocessor.yahoodownloader import YahooDownloader
 
 # %% Part 1. Load data
 
@@ -36,10 +36,10 @@ trade.index.names = [""]
 # %% Part 2. Load trained agents
 
 if_using_a2c = True
-if_using_ddpg = True
-if_using_ppo = True
-if_using_td3 = True
-if_using_sac = True
+if_using_ddpg = False
+if_using_ppo = False
+if_using_td3 = False
+if_using_sac = False
 
 trained_a2c = A2C.load(TRAINED_MODEL_DIR + "/agent_a2c") if if_using_a2c else None
 trained_ddpg = DDPG.load(TRAINED_MODEL_DIR + "/agent_ddpg") if if_using_ddpg else None

@@ -1,15 +1,15 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 2. DRL Agents
 ============================
 
-FinRL contains fine-tuned standard DRL algorithms in ElegantRL, Stable Baseline 3, and RLlib. ElegantRL is a scalable and elastic DRL library that maintained by DigitalMetro, with faster and more stable performance than Stable Baseline 3 and RLlib. In the *Three-Layer Architecture* section, there will be detailed explanation about how ElegantRL accomplish its role in FinRL perfectly. If interested, please refer to ElegantRL's `GitHub page <https://github.com/DigitalMetro/ElegantRL>`_ or `documentation <https://elegantrl.readthedocs.io>`_.
+FLX contains fine-tuned standard DRL algorithms in ElegantRL, Stable Baseline 3, and RLlib. ElegantRL is a scalable and elastic DRL library that maintained by DigitalMetro, with faster and more stable performance than Stable Baseline 3 and RLlib. In the *Three-Layer Architecture* section, there will be detailed explanation about how ElegantRL accomplish its role in FLX perfectly. If interested, please refer to ElegantRL's `GitHub page <https://github.com/DigitalMetro/ElegantRL>`_ or `documentation <https://elegantrl.readthedocs.io>`_.
 
-With those three powerful DRL libraries, FinRL provides the following algorithms for users:
+With those three powerful DRL libraries, FLX provides the following algorithms for users:
 
 .. image:: ../../image/alg_compare.png
 
-As mentioned in the introduction, FinRL's DRL agents are built by fine-tuned standard DRL algorithms depending on three famous DRL library: ElegantRL, Stable Baseline 3, and RLlib.
+As mentioned in the introduction, FLX's DRL agents are built by fine-tuned standard DRL algorithms depending on three famous DRL library: ElegantRL, Stable Baseline 3, and RLlib.
 
 The supported algorithms include: DQN, DDPG, Multi-Agent DDPG, PPO, SAC, A2C and TD3. We also allow users to design their own DRL algorithms by adapting these DRL algorithms, e.g., Adaptive DDPG, or employing ensemble methods. The comparison of DRL algorithms is shown in the table bellow:
 

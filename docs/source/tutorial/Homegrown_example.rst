@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 Homegrown Example
 ========================

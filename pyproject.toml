@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "finrl"
+name = "flx"
 version = "1.0.0"
 
-description = "FinRL: Financial Reinforcement Learning Framework for Automated Quantitative Trading."
+description = "FLX: Financial Reinforcement Learning Framework for Automated Quantitative Trading."
 authors = ["Digital Metro"]
 license = "MIT"
 

@@ -1,21 +1,21 @@
-.. FinRL Library documentation
+.. FLX Library documentation
 
-Welcome to FinRL Library!
+Welcome to FLX Library!
 =====================================================================================================
 
 .. meta::
-   :description: FinRL is an open source framework for financial reinforcement learning. It facilitates development of stock trading strategies using deep reinforcement learning, providing fine-tuned algorithms including DQN, DDPG, PPO, SAC, A2C, TD3, etc.
+   :description: FLX is an open source framework for financial reinforcement learning. It facilitates development of stock trading strategies using deep reinforcement learning, providing fine-tuned algorithms including DQN, DDPG, PPO, SAC, A2C, TD3, etc.
    :keywords: finance AI, artificial intelligence in finance, machine learning, deep reinforcement learning, DRL, RL, neural networks, deep q network, quantitative trading
 
 .. image:: image/logo_transparent_background.png
 
 **Disclaimer: Nothing herein is financial advice, and NOT a recommendation to trade real money. Please use common sense and always first consult a professional before trading or investing.**
 
-FinRL is an open source framework for financial reinforcement learning, providing end-to-end support for automated quantitative trading.
+FLX is an open source framework for financial reinforcement learning, providing end-to-end support for automated quantitative trading.
 
 Reinforcement learning (RL) trains an agent to solve tasks by trial and error, while DRL uses deep neural networks as function approximators. DRL balances exploration (of uncharted territory) and exploitation (of current knowledge), and has been recognized as a competitive edge for automated trading. DRL framework is powerful in solving dynamic decision making problems by learning through interactions with an unknown environment, thus exhibiting two major advantages: portfolio scalability and market model independence. Automated trading is essentially making dynamic decisions, namely **to decide where to trade, at what price, and what quantity**, over a highly stochastic and complex stock market. Taking many complex financial factors into account, DRL trading agents build a multi-factor model and provide algorithmic trading strategies, which are difficult for human traders.
 
-FinRL provides a framework that supports various markets, SOTA DRL algorithms, benchmarks of many quant finance tasks, live trading, etc.
+FLX provides a framework that supports various markets, SOTA DRL algorithms, benchmarks of many quant finance tasks, live trading, etc.
 
 |
 
@@ -39,13 +39,13 @@ FinRL provides a framework that supports various markets, SOTA DRL algorithms, b
 
 .. toctree::
    :maxdepth: 1
-   :caption: FinRL-Meta
+   :caption: FLX-Meta
 
-   finrl_meta/background
-   finrl_meta/overview
-   finrl_meta/Data_layer
-   finrl_meta/Environment_layer
-   finrl_meta/Benchmark
+   flx_meta/background
+   flx_meta/overview
+   flx_meta/Data_layer
+   flx_meta/Environment_layer
+   flx_meta/Benchmark
 
 
 .. toctree::

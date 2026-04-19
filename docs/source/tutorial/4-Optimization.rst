@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 4-Optimization
 ========================
@@ -7,10 +7,10 @@ This section provideds examples of hyperperameter tuning and connecting cloud pl
 
 Notebooks in this section includes:
 
-`FinRL_HyperparameterTuning_Optuna.ipynb <https://github.com/DigitalMetro/FinRL-Tutorials/blob/master/4-Optimization/FinRL_HyperparameterTuning_Optuna.ipynb>`_,
+`FLX_HyperparameterTuning_Optuna.ipynb <https://github.com/DigitalMetro/FLX-Tutorials/blob/master/4-Optimization/FLX_HyperparameterTuning_Optuna.ipynb>`_,
 
-`FinRL_HyperparameterTuning_Raytune_RLlib.ipynb <https://github.com/DigitalMetro/FinRL-Tutorials/blob/master/4-Optimization/FinRL_HyperparameterTuning_Raytune_RLlib.ipynb>`_,
+`FLX_HyperparameterTuning_Raytune_RLlib.ipynb <https://github.com/DigitalMetro/FLX-Tutorials/blob/master/4-Optimization/FLX_HyperparameterTuning_Raytune_RLlib.ipynb>`_,
 
-`FinRL_HyperparameterTuning_using_Optuna_basic.ipynb <https://github.com/DigitalMetro/FinRL-Tutorials/blob/master/4-Optimization/FinRL_HyperparameterTuning_using_Optuna_basic.ipynb>`_,
+`FLX_HyperparameterTuning_using_Optuna_basic.ipynb <https://github.com/DigitalMetro/FLX-Tutorials/blob/master/4-Optimization/FLX_HyperparameterTuning_using_Optuna_basic.ipynb>`_,
 
-`FinRL_Weights_and_Biasify_StableBaselines3.ipynb <https://github.com/DigitalMetro/FinRL-Tutorials/blob/master/4-Optimization/FinRL_Weights_and_Biasify_StableBaselines3.ipynb>`_.
+`FLX_Weights_and_Biasify_StableBaselines3.ipynb <https://github.com/DigitalMetro/FLX-Tutorials/blob/master/4-Optimization/FLX_Weights_and_Biasify_StableBaselines3.ipynb>`_.

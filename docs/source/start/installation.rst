@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 ============================
 Installation
@@ -49,14 +49,14 @@ Installation of system packages on Mac requires Homebrew. With Homebrew installe
 
    brew install cmake openmpi
 
-Step 4: Install `FinRL <https://github.com/DigitalMetro/FinRL>`_
+Step 4: Install `FLX <https://github.com/DigitalMetro/FLX>`_
 --------------------------------------------------------------------------
 
-Since we are still actively updating the FinRL repository, please install the unstable development version of FinRL using pip:
+Since we are still actively updating the FLX repository, please install the unstable development version of FLX using pip:
 
 .. code-block:: bash
 
-   pip install git+https://github.com/DigitalMetro/FinRL.git
+   pip install git+https://github.com/DigitalMetro/FLX.git
 
 
 Step 5: Install box2d (if using box2d)
@@ -77,20 +77,20 @@ If it raises errors "AttributeError: module '_Box2D' has no attribute 'RAND_LIMI
   pip install box2d box2d-kengz
 
 
-Step 6: Run `FinRL <https://github.com/DigitalMetro/FinRL>`_
+Step 6: Run `FLX <https://github.com/DigitalMetro/FLX>`_
 --------------------------------------------------------------------------
 
-Download the FinRL-Tutorials repository either use terminal:
+Download the FLX-Tutorials repository either use terminal:
 
 .. code-block:: bash
 
-   git clone https://github.com/DigitalMetro/FinRL-Tutorials.git
+   git clone https://github.com/DigitalMetro/FLX-Tutorials.git
 
 or download it manually
 
-.. image:: ../image/download_FinRL.png
+.. image:: ../image/download_FLX.png
 
-Open Jupyter Notebook through Anaconda Navigator and locate one of the stock trading notebook in FinRL-Tutorials you just downloaded. You should be able to run it.
+Open Jupyter Notebook through Anaconda Navigator and locate one of the stock trading notebook in FLX-Tutorials you just downloaded. You should be able to run it.
 
 
 Ubuntu
@@ -110,14 +110,14 @@ Open an ubuntu terminal and type:
 
    sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev libgl1-mesa-glx swig
 
-Step 3: Install `FinRL <https://github.com/DigitalMetro/FinRL>`_
+Step 3: Install `FLX <https://github.com/DigitalMetro/FLX>`_
 --------------------------------------------------------------------------
 
-Since we are still actively updating the FinRL repository, please install the unstable development version of FinRL using pip:
+Since we are still actively updating the FLX repository, please install the unstable development version of FLX using pip:
 
 .. code-block:: bash
 
-   pip install git+https://github.com/DigitalMetro/FinRL.git
+   pip install git+https://github.com/DigitalMetro/FLX.git
 
 
 Step 4: Install box2d (if using box2d)
@@ -125,18 +125,18 @@ Step 4: Install box2d (if using box2d)
 
 
 
-Step 5: Run `FinRL <https://github.com/DigitalMetro/FinRL>`_
+Step 5: Run `FLX <https://github.com/DigitalMetro/FLX>`_
 --------------------------------------------------------------------------
 
-Download the FinRL repository in terminal:
+Download the FLX repository in terminal:
 
 .. code-block:: bash
 
-   git clone https://github.com/DigitalMetro/FinRL.git
+   git clone https://github.com/DigitalMetro/FLX.git
 
 Open Jupyter Notebook by typing 'jupyter notebook' in your ubuntu terminal.
 
-Locate one of the stock trading notebook in FinRL/tutorials you just downloaded. You should be able to run it.
+Locate one of the stock trading notebook in FLX/tutorials you just downloaded. You should be able to run it.
 
 Windows 10
 ======================
@@ -144,19 +144,19 @@ Prepare for install
 --------------------------------------------------------------------------
 1. VPN is needed if using YahooFinance in china (pyfolio, elegantRL pip dependencies need pull code, YahooFinance has stopped the service in china). Otherwise, please ignore it.
 2. python version >=3.7
-3. pip remove zipline, if your system has installed zipline, zipline has conflicts with the FinRL.
+3. pip remove zipline, if your system has installed zipline, zipline has conflicts with the FLX.
 
-Step 1: Clone `FinRL <https://github.com/DigitalMetro/FinRL>`_
+Step 1: Clone `FLX <https://github.com/DigitalMetro/FLX>`_
 --------------------------------------------------------------------------
 .. code-block:: bash
 
-   git clone https://github.com/DigitalMetro/FinRL.git
+   git clone https://github.com/DigitalMetro/FLX.git
 
 Step 2: install dependencies
 --------------------------------------------------------------------------
 .. code-block:: bash
 
-    cd FinRL
+    cd FLX
     pip install .
 
 
@@ -208,28 +208,28 @@ Open an ubuntu terminal and type:
 
    sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev libgl1-mesa-glx swig
 
-Step 4: Install `FinRL <https://github.com/DigitalMetro/FinRL>`_
+Step 4: Install `FLX <https://github.com/DigitalMetro/FLX>`_
 --------------------------------------------------------------------------
 
-Since we are still actively updating the FinRL repository, please install the unstable development version of FinRL using pip:
+Since we are still actively updating the FLX repository, please install the unstable development version of FLX using pip:
 
 .. code-block:: bash
 
-   pip install git+https://github.com/DigitalMetro/FinRL.git
+   pip install git+https://github.com/DigitalMetro/FLX.git
 
 
 Step 5: Install box2d (if using box2d)
 --------------------------------------------------------------------------
 
-Step 6: Run `FinRL <https://github.com/DigitalMetro/FinRL>`_
+Step 6: Run `FLX <https://github.com/DigitalMetro/FLX>`_
 --------------------------------------------------------------------------
 
-Download the FinRL-Tutorials repository in terminal:
+Download the FLX-Tutorials repository in terminal:
 
 .. code-block:: bash
 
-   git clone https://github.com/DigitalMetro/FinRL-Tutorials.git
+   git clone https://github.com/DigitalMetro/FLX-Tutorials.git
 
 Open Jupyter Notebook by typing 'jupyter notebook' in your ubuntu terminal. Please see `jupyter notebook <https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/execute.html>`_
 
-Locate one of the stock trading notebook in FinRL-Tutorials you just downloaded. You should be able to run it.
+Locate one of the stock trading notebook in FLX-Tutorials you just downloaded. You should be able to run it.

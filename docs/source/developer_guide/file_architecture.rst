@@ -1,15 +1,15 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 =================
 File Architecture
 =================
 
-FinRL's file architecture strictly follow the :ref:`three-layer architecture`.
+FLX's file architecture strictly follow the :ref:`three-layer architecture`.
 
 .. code:: bash
 
-    FinRL
-    ├── finrl (the main folder)
+    FLX
+    ├── flx (the main folder)
     │   ├── applications
     │   	├── cryptocurrency_trading
     │   	├── high_frequency_trading
@@ -26,7 +26,7 @@ FinRL's file architecture strictly follow the :ref:`three-layer architecture`.
     │   	├── env_stock_trading
     │   	├── preprocessor
     │   	├── data_processor.py
-    │   	└── finrl_meta_config.py
+    │   	└── flx_meta_config.py
     │   ├── config.py
     │   ├── config_tickers.py
     │   ├── main.py

@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 =======================
 Introduction
@@ -22,9 +22,9 @@ Introduction
 **Contributions**
 
 
-    - FinRL is an open source framework for financial reinforcement learning. Trading environments incorporating market frictions are provided.
+    - FLX is an open source framework for financial reinforcement learning. Trading environments incorporating market frictions are provided.
     - Trading tasks accompanied by hands-on tutorials are available in a beginner-friendly and reproducible fashion. Customization is feasible.
-    - FinRL has good scalability, with fine-tuned state-of-the-art DRL algorithms. Adjusting the implementations to the rapid changing stock market is well supported.
+    - FLX has good scalability, with fine-tuned state-of-the-art DRL algorithms. Adjusting the implementations to the rapid changing stock market is well supported.
     - Typical use cases are selected to establish benchmarks for the quantitative finance community. Standard backtesting and evaluation metrics are also provided for easy and effective performance evaluation.
 
-With FinRL library, the implementation of powerful DRL trading strategies becomes more accessible, efficient and delightful.
+With FLX library, the implementation of powerful DRL trading strategies becomes more accessible, efficient and delightful.

@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 Quick Start
 ==================
@@ -11,9 +11,9 @@ Open ``main.py``
     import os
     from typing import List
     from argparse import ArgumentParser
-    from finrl import config
-    from finrl.config_tickers import DOW_30_TICKER
-    from finrl.config import (
+    from flx import config
+    from flx.config_tickers import DOW_30_TICKER
+    from flx.config import (
         DATA_SAVE_DIR,
         TRAINED_MODEL_DIR,
         TENSORBOARD_LOG_DIR,
@@ -34,7 +34,7 @@ Open ``main.py``
     )
 
     # construct environment
-    from finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
+    from flx.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
 
 
     def build_parser():
@@ -63,7 +63,7 @@ Open ``main.py``
         check_and_make_directories([DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR])
 
         if options.mode == "train":
-            from finrl import train
+            from flx import train
 
             env = StockTradingEnv
 
@@ -85,7 +85,7 @@ Open ``main.py``
                 kwargs=kwargs,
             )
         elif options.mode == "test":
-            from finrl import test
+            from flx import test
             env = StockTradingEnv
 
             # demo for elegantrl
@@ -106,7 +106,7 @@ Open ``main.py``
                 kwargs=kwargs,
             )
         elif options.mode == "trade":
-            from finrl import trade
+            from flx import trade
             env = StockTradingEnv
             kwargs = {}
             trade(

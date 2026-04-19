@@ -3,7 +3,7 @@ from __future__ import annotations
 import pandas as pd
 import pytest
 
-from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
+from flx.meta.preprocessor.yahoodownloader import YahooDownloader
 
 
 @pytest.fixture(scope="session")

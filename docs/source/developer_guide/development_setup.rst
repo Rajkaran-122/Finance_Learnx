@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 ============================
 Development Guide
@@ -14,11 +14,11 @@ Step 1: Download Software
 -Download and install `PyCharm <https://www.jetbrains.com/pycharm/>`_.  The Community Edition (free version) offers everything you need except running Jupyter notebooks. The Full-fledged Professional Edition offers everything. A workaround to run existing notebooks in the Community edition is to copy all notebook cells into .py files.
 For notebook support, you can consider PyCharm Professional Edition.
 
--On GitHub, fork `FinRL <https://github.com/DigitalMetro/FinRL>`_ to your private Github repo.
+-On GitHub, fork `FLX <https://github.com/DigitalMetro/FLX>`_ to your private Github repo.
 
 -On GitHub, fork `ElegantRL <https://github.com/DigitalMetro/ElegantRL>`_ to your private Github repo.
 
--On GitHub, fork `FinRL-Meta <https://github.com/DigitalMetro/FinRL-Meta>`_ to your private Github repo.
+-On GitHub, fork `FLX-Meta <https://github.com/DigitalMetro/FLX-Meta>`_ to your private Github repo.
 
 -All next steps happen on your local computer.
 
@@ -29,9 +29,9 @@ Step 2: Git Clone
 
     mkdir ~/ai4finance
     cd ~/ai4finance
-    git clone https://github.com/[your_github_username]/FinRL.git
+    git clone https://github.com/[your_github_username]/FLX.git
     git clone https://github.com/[your_github_username]/ElegantRL.git
-    git clone https://github.com/[your_github_username]/FinRL-Meta.git
+    git clone https://github.com/[your_github_username]/FLX-Meta.git
 
 
 Step 3: Create a Conda Environment
@@ -43,7 +43,7 @@ Step 3: Create a Conda Environment
     conda create --name ai4finance python=3.8
     conda activate ai4finance
 
-    cd FinRL
+    cd FLX
     pip install -r requirements.txt
 
 Install ElegantRL using requirements.txt, or open ElegantRL/setup.py in a text editor and pip install anything you can find: gym, matplotlib, numpy, pybullet, torch, opencv-python, and box2d-py.
@@ -64,18 +64,18 @@ Step 4: Configure a PyCharm Project
 
 -At the left of the screen, in the project file tree:
 
-    - Right-click on the FinRL folder > Mark Directory as > Sources Root
+    - Right-click on the FLX folder > Mark Directory as > Sources Root
     - Right-click on the ElegantRL folder > Mark Directory as > Sources Root
-    - Right-click on the FinRL-Meta folder > Mark Directory as > Sources Root
+    - Right-click on the FLX-Meta folder > Mark Directory as > Sources Root
 
 -Once you run a .py file, you will notice that you may still have some missing packages.  In that case, simply pip install them.
 
-For example, we revise FinRL.
+For example, we revise FLX.
 
 .. code-block:: bash
 
     cd ~/ai4finance
-    cd ./FinRL
+    cd ./FLX
     git checkout -b branch_xxx
 
 where branch_xxx is a new branch name. In this branch, we revise config.py.
@@ -91,11 +91,11 @@ Step 6: Creating Commits and PRs/MRs
 
 -Create commits as you usually do through PyCharm.
 
--Make sure that each commit covers only 1 of the 3 repo's. Don't create a commit that spans more than one repo, e.g., FinRL and ElegantRL.
+-Make sure that each commit covers only 1 of the 3 repo's. Don't create a commit that spans more than one repo, e.g., FLX and ElegantRL.
 
 .. image:: ../image/pycharm_push_PR.png
 
--When you do a Git Push, PyCharm will ask you to which of the 3 repos you want to push. Just like the above figure, we select the repo "FinRL".
+-When you do a Git Push, PyCharm will ask you to which of the 3 repos you want to push. Just like the above figure, we select the repo "FLX".
 
 
 With respect to creating a pull request (PR) or merge quest (MR), please refer to `Create a PR <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request>`_ or `Opensource Create a PR <https://opensource.com/article/19/7/create-pull-request-github>`_.

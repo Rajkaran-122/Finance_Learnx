@@ -2,14 +2,14 @@
 
 <img align="center" src=figs/logo_transparent_background.png width="55%"/>
 
-# FinRL: Financial Reinforcement Learning
+# FLX: Financial Reinforcement Learning
 
 ### *Deep Reinforcement Learning Framework for Automated Quantitative Trading*
 
 > A production-ready DRL framework for financial trading — covering data acquisition, model training, backtesting, and live paper trading across stocks, crypto, and portfolios.
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![PyPI](https://img.shields.io/pypi/v/finrl.svg)](https://pypi.org/project/finrl/)
+[![PyPI](https://img.shields.io/pypi/v/flx.svg)](https://pypi.org/project/flx/)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 
@@ -35,7 +35,7 @@
 
 ## 🧠 About the Project
 
-**FinRL** is a deep reinforcement learning framework for automated quantitative trading. It provides end-to-end support for the full trading pipeline — from market data acquisition and feature engineering to model training, backtesting, and live paper trading.
+**FLX** is a deep reinforcement learning framework for automated quantitative trading. It provides end-to-end support for the full trading pipeline — from market data acquisition and feature engineering to model training, backtesting, and live paper trading.
 
 The framework is designed around three core layers:
 
@@ -43,7 +43,7 @@ The framework is designed around three core layers:
 - 🤖 **DRL Agents** — Plug-and-play support for ElegantRL, RLlib, and Stable Baselines 3
 - 📊 **Financial Applications** — Ready-to-use trading strategies and backtesting pipelines
 
-Whether you're a researcher prototyping new trading strategies or a developer building production trading systems — **FinRL provides the foundation.**
+Whether you're a researcher prototyping new trading strategies or a developer building production trading systems — **FLX provides the foundation.**
 
 ---
 
@@ -99,7 +99,7 @@ Data Acquisition → Feature Engineering → Environment Setup → Agent Trainin
 
 ```
 Finance_pro/
-├── finrl/                          # Core library
+├── flx/                          # Core library
 │   ├── applications/              # Trading task implementations
 │   │   ├── cryptocurrency_trading/
 │   │   ├── high_frequency_trading/
@@ -125,9 +125,9 @@ Finance_pro/
 │   └── plot.py                    # Visualization utilities
 │
 ├── examples/                      # Tutorial scripts
-│   ├── FinRL_StockTrading_2026_1_data.py
-│   ├── FinRL_StockTrading_2026_2_train.py
-│   └── FinRL_StockTrading_2026_3_Backtest.py
+│   ├── FLX_StockTrading_2026_1_data.py
+│   ├── FLX_StockTrading_2026_2_train.py
+│   └── FLX_StockTrading_2026_3_Backtest.py
 │
 ├── unit_tests/                    # Test suite
 ├── docs/                          # Documentation (Sphinx)
@@ -185,7 +185,7 @@ pip install -e .
 ### Option 2: Install via pip
 
 ```bash
-pip install finrl
+pip install flx
 ```
 
 ### Option 3: Docker
@@ -211,7 +211,7 @@ pip install -e .
 ### Step 2: Download & Preprocess Data
 
 ```bash
-python examples/FinRL_StockTrading_2026_1_data.py
+python examples/FLX_StockTrading_2026_1_data.py
 ```
 
 This downloads DOW 30 stock data from Yahoo Finance, adds technical indicators (MACD, RSI, etc.), VIX, and turbulence index, then splits into training (2014–2025) and trading (2026) sets.
@@ -219,7 +219,7 @@ This downloads DOW 30 stock data from Yahoo Finance, adds technical indicators (
 ### Step 3: Train DRL Agents
 
 ```bash
-python examples/FinRL_StockTrading_2026_2_train.py
+python examples/FLX_StockTrading_2026_2_train.py
 ```
 
 Trains 5 DRL agents (A2C, DDPG, PPO, TD3, SAC) using Stable Baselines 3. Models are saved to `trained_models/`.
@@ -236,7 +236,7 @@ Trains 5 DRL agents (A2C, DDPG, PPO, TD3, SAC) using Stable Baselines 3. Models 
 ### Step 4: Backtest
 
 ```bash
-python examples/FinRL_StockTrading_2026_3_Backtest.py
+python examples/FLX_StockTrading_2026_3_Backtest.py
 ```
 
 Runs trained agents on trading data and compares against MVO and DJIA baselines. Results are printed to console and saved as `backtest_result.png`.
@@ -245,7 +245,7 @@ Runs trained agents on trading data and compares against MVO and DJIA baselines.
 
 ## 📡 API Reference
 
-### Configuration (`finrl/config.py`)
+### Configuration (`flx/config.py`)
 
 | Variable | Default | Description |
 |---|---|---|
@@ -269,7 +269,7 @@ Runs trained agents on trading data and compares against MVO and DJIA baselines.
 
 ## 📝 Notes & Recommendations
 
-- **API Keys** — Set your Alpaca, Binance, or other API keys in `finrl/config.py` or via environment variables. Never commit secrets.
+- **API Keys** — Set your Alpaca, Binance, or other API keys in `flx/config.py` or via environment variables. Never commit secrets.
 - **Training Time** — Start with low `total_timesteps` (1,000) to verify the pipeline works, then scale up (100k+) for serious training.
 - **GPU Support** — Stable Baselines 3 supports CUDA. Install PyTorch with GPU support for faster training.
 - **Data Quality** — Yahoo Finance is free but has limitations. For institutional-grade data, use WRDS or Alpaca.

@@ -18,7 +18,7 @@ except FileNotFoundError:
     REQUIRES = list()
 
 setup(
-    name="FinRL",
+    name="FLX",
     version="1.0.0",
     include_package_data=True,
     author="Digital Metro",
@@ -26,7 +26,7 @@ setup(
     url="",
     license="MIT",
     packages=find_packages(),
-    description="FinRL: Financial Reinforcement Learning Framework for Automated Quantitative Trading.",
+    description="FLX: Financial Reinforcement Learning Framework for Automated Quantitative Trading.",
     long_description="A deep reinforcement learning framework for automated quantitative trading — covering data acquisition, model training, backtesting, and live paper trading.",
     classifiers=[
         # Trove classifiers

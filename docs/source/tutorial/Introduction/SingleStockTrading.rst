@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL-Library
+:github_url: https://github.com/DigitalMetro/FLX-Library
 
 Single Stock Trading
 ============================
@@ -10,7 +10,7 @@ Deep Reinforcement Learning for Stock Trading from Scratch: Single Stock Trading
 
     Run the code step by step at `Google Colab`_.
 
-    .. _Google Colab: https://colab.research.google.com/github/DigitalMetro/FinRL-Library/blob/master/examples/old/DRL_single_stock_trading.ipynb
+    .. _Google Colab: https://colab.research.google.com/github/DigitalMetro/FLX-Library/blob/master/examples/old/DRL_single_stock_trading.ipynb
 
 
 
@@ -23,9 +23,9 @@ Step 1: Preparation
 
 As deep reinforcement learning (DRL) has been recognized as an effective approach in quantitative finance, getting hands-on experiences is attractive to beginners. However, to train a practical DRL trading agent that decides where to trade, at what price, and what quantity involves error-prone and arduous development and debugging.
 
-We introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative finance and to develop their own stock trading strategies. Along with easily-reproducible tutorials, FinRL library allows users to streamline their own developments and to compare with existing schemes easily.
+We introduce a DRL library FLX that facilitates beginners to expose themselves to quantitative finance and to develop their own stock trading strategies. Along with easily-reproducible tutorials, FLX library allows users to streamline their own developments and to compare with existing schemes easily.
 
-FinRL is a beginner-friendly library with fine-tuned standard DRL algorithms. It has been developed under three primary principles:
+FLX is a beginner-friendly library with fine-tuned standard DRL algorithms. It has been developed under three primary principles:
 
     - Completeness: Our library shall cover components of the DRL framework completely, which is a fundamental requirement;
 
@@ -37,7 +37,7 @@ This article is focusing on one of the use cases in our paper: Single Stock Trad
 
 We use Apple Inc. stock: AAPL as an example throughout this article, because it is one of the most popular stocks.
 
-.. image:: ../../image/FinRL-Architecture.png
+.. image:: ../../image/FLX-Architecture.png
 
 **Step 1.2: Problem Definition**
 
@@ -118,16 +118,16 @@ Step 2: Download Data
 .. _Yahoo Finance: https://finance.yahoo.com/
 .. _This Medium blog: https://towardsdatascience.com/free-stock-data-for-python-using-yahoo-finance-api-9dafd96cad2e
 
-    - FinRL uses a class YahooDownloader to fetch data from Yahoo Finance API
+    - FLX uses a class YahooDownloader to fetch data from Yahoo Finance API
 
     - Call Limit: Using the Public API (without authentication), you are limited to 2,000 requests per hour per IP (or up to a total of 48,000 requests a day).
 
 We can either download the stock data like open-high-low-close price manually by entering a stock ticker symbol like AAPL into the website search bar, or we just use Yahoo Finance API to extract data automatically.
 
 
-FinRL uses a YahooDownloader_ class to extract data.
+FLX uses a YahooDownloader_ class to extract data.
 
-.. _YahooDownloader: https://github.com/DigitalMetro/FinRL-Library/blob/master/finrl/marketdata/yahoodownloader.py
+.. _YahooDownloader: https://github.com/DigitalMetro/FLX-Library/blob/master/flx/marketdata/yahoodownloader.py
 
 .. code-block:: python
 
@@ -172,7 +172,7 @@ Step 3: Preprocess Data
 
 Data preprocessing is a crucial step for training a high quality machine learning model. We need to check for missing data and do feature engineering in order to convert the data into a model-ready state.
 
-    - FinRL uses a FeatureEngineer class to preprocess the data
+    - FLX uses a FeatureEngineer class to preprocess the data
 
     - Add technical indicators. In practical trading, various information needs to be taken into account, for example the historical stock prices, current holding shares, technical indicators, etc.
 
@@ -180,7 +180,7 @@ Data preprocessing is a crucial step for training a high quality machine learnin
 
 In practical trading, various information needs to be taken into account, for example the historical stock prices, current holding shares, technical indicators, etc.
 
-    - FinRL uses stockstats to calcualte technical indicators such as Moving Average Convergence Divergence (MACD), Relative Strength Index (RSI), Average Directional Index (ADX), Commodity Channel Index (CCI) and other various indicators and stats.
+    - FLX uses stockstats to calcualte technical indicators such as Moving Average Convergence Divergence (MACD), Relative Strength Index (RSI), Average Directional Index (ADX), Commodity Channel Index (CCI) and other various indicators and stats.
 
     - stockstats: supplies a wrapper StockDataFrame based on the pandas.DataFrame with inline stock statistics/indicators support.
 
@@ -190,9 +190,9 @@ In practical trading, various information needs to be taken into account, for ex
 
     - User can add more technical indicators, check https://github.com/jealous/stockstats for different names
 
-FinRL uses a FeatureEngineer_ class to preprocess data.
+FLX uses a FeatureEngineer_ class to preprocess data.
 
-.. _FeatureEngineer: https://github.com/DigitalMetro/FinRL-Library/blob/master/finrl/preprocessing/preprocessors.py
+.. _FeatureEngineer: https://github.com/DigitalMetro/FLX-Library/blob/master/flx/preprocessing/preprocessors.py
 
 .. code-block:: python
 
@@ -244,9 +244,9 @@ The action space describes the allowed actions that the agent interacts with the
 
 In this article, I set k=200, the entire action space is 200*2+1 = 401 for AAPL.
 
-FinRL uses a EnvSetup_ class to setup environment.
+FLX uses a EnvSetup_ class to setup environment.
 
-.. _EnvSetup: https://github.com/DigitalMetro/FinRL-Library/blob/master/finrl/env/environment.py
+.. _EnvSetup: https://github.com/DigitalMetro/FLX-Library/blob/master/flx/env/environment.py
 
 .. code-block:: python
 
@@ -297,9 +297,9 @@ Initialize an environment class:
 
 User-defined Environment: a simulation environment class.
 
-FinRL provides blueprint for `single stock trading environment`_.
+FLX provides blueprint for `single stock trading environment`_.
 
-.. _single stock trading environment: https://github.com/DigitalMetro/FinRL-Library/blob/master/finrl/env/EnvSingleStock.py
+.. _single stock trading environment: https://github.com/DigitalMetro/FLX-Library/blob/master/flx/env/EnvSingleStock.py
 
 .. code-block:: python
 
@@ -365,11 +365,11 @@ The implementation of the DRL algorithms are based on `OpenAI Baselines`_ and St
 .. _Stable Baselines: https://github.com/hill-a/stable-baselines
 
 .. tip::
-    FinRL library includes fine-tuned standard DRL algorithms, such as DQN, DDPG, Multi-Agent DDPG, PPO, SAC, A2C and TD3. We also allow users to design their own DRL algorithms by adapting these DRL algorithms.
+    FLX library includes fine-tuned standard DRL algorithms, such as DQN, DDPG, Multi-Agent DDPG, PPO, SAC, A2C and TD3. We also allow users to design their own DRL algorithms by adapting these DRL algorithms.
 
 .. image:: ../../image/alg_compare.png
 
-FinRL uses a DRLAgent class to implement the algorithms.
+FLX uses a DRLAgent class to implement the algorithms.
 
 .. code-block:: python
 

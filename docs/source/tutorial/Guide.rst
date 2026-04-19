@@ -1,13 +1,13 @@
-:github_url: https://github.com/DigitalMetro/FinRL
+:github_url: https://github.com/DigitalMetro/FLX
 
 Tutorials Guide
 ========================
 
-Welcome to FinRL's tutorial! In this section, you can walk through the tutorial notebooks we prepared. If you are new to FinRL, we would suggest you the following sequence:
+Welcome to FLX's tutorial! In this section, you can walk through the tutorial notebooks we prepared. If you are new to FLX, we would suggest you the following sequence:
 
-.. image:: ../image/FinRL_Tutorials.png
+.. image:: ../image/FLX_Tutorials.png
    :align: center
-   :target:  https://github.com/DigitalMetro/FinRL/tree/master/tutorials
+   :target:  https://github.com/DigitalMetro/FLX/tree/master/tutorials
 
 Mission: provide user-friendly demos in notebook or python.
 

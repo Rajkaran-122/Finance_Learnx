@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL-Library
+:github_url: https://github.com/DigitalMetro/FLX-Library
 
 =============================
 FAQ
@@ -9,9 +9,9 @@ FAQ
 :Contributors: Roberto Fray da Silva, Xiao-Yang Liu, Ziyi Xia, Ming Zhu
 
 
-This document contains the most frequently asked questions related to FinRL, which are based on questions posted on the slack channels and Github_ issues.
+This document contains the most frequently asked questions related to FLX, which are based on questions posted on the slack channels and Github_ issues.
 
-.. _Github: https://github.com/DigitalMetro/FinRL
+.. _Github: https://github.com/DigitalMetro/FLX
 
 
 Outline
@@ -36,19 +36,19 @@ Outline
 	.. role:: raw-html(raw)
 	   :format: html
 
-    - :raw-html:`<font color="#A52A2A">Can I use FinRL for crypto? </font>`
+    - :raw-html:`<font color="#A52A2A">Can I use FLX for crypto? </font>`
 
 	*Not yet. We're developing this functionality*
 
-    - :raw-html:`<font color="#A52A2A">Can I use FinRL for live trading?  </font>`
+    - :raw-html:`<font color="#A52A2A">Can I use FLX for live trading?  </font>`
 
 	*Not yet. We're developing this functionality*
 
-    - :raw-html:`<font color="#A52A2A">Can I use FinRL for forex? </font>`
+    - :raw-html:`<font color="#A52A2A">Can I use FLX for forex? </font>`
 
 	*Not yet. We're developing this functionality*
 
-    - :raw-html:`<font color="#A52A2A">Can I use FinRL for futures? </font>`
+    - :raw-html:`<font color="#A52A2A">Can I use FLX for futures? </font>`
 
 	*Not yet*
 
@@ -60,7 +60,7 @@ Outline
 
 	*Yahoo Finance (only up to last 7 days), through the yfinance library. It is the only option besides scraping (or paying for a service provider)*
 
-    - :raw-html:`<font color="#A52A2A">Does FinRL support trading with leverage? </font>`
+    - :raw-html:`<font color="#A52A2A">Does FLX support trading with leverage? </font>`
 
 	*No, as this is more of an execution strategy related to risk control. You can use it as part of your system, adding the risk control part as a separate component*
 
@@ -80,7 +80,7 @@ Outline
 	.. role:: raw-html(raw)
 	   :format: html
 
-    - :raw-html:`<font color="#A52A2A">Does FinRL supports GPU training?  </font>`
+    - :raw-html:`<font color="#A52A2A">Does FLX supports GPU training?  </font>`
 
 	*Yes, it does*
 
@@ -104,17 +104,17 @@ Outline
 
 	*There are several, such as: Ray Tune and Optuna. You can start from our examples in the tutorials*
 
-    - :raw-html:`<font color="#A52A2A">What DRL algorithms can I use with FinRL?  </font>`
+    - :raw-html:`<font color="#A52A2A">What DRL algorithms can I use with FLX?  </font>`
 
 	*We suggest using ElegantRL or Stable Baselines 3. We tested the following models with success: A2C, A3C, DDPG, PPO, SAC, TD3, TRPO. You can also create your own algorithm, with an OpenAI Gym-style market environment*
 
     - :raw-html:`<font color="#A52A2A">The model is presenting strange results OR is not training.   </font>`
 
-	*Please update to latest version (https://github.com/DigitalMetro/FinRL-Library), check if the hyperparameters used were not outside a normal range (ex: learning rate too high), and run the code again. If you still have problems, please check Section 2 (What to do when you experience problems)*
+	*Please update to latest version (https://github.com/DigitalMetro/FLX-Library), check if the hyperparameters used were not outside a normal range (ex: learning rate too high), and run the code again. If you still have problems, please check Section 2 (What to do when you experience problems)*
 
     - :raw-html: `<font color="#A52A2A">What to do when you experience problems? </font>`
 
-    *1. Check if it is not already answered on this FAQ 2. Check if it is posted on the GitHub repo* `issues <https://github.com/DigitalMetro/FinRL-Library/issues>`_. If not, welcome to submit an issue on GitHub 3. Use the correct channel on the DigitalMetro slack or Wechat group.*
+    *1. Check if it is not already answered on this FAQ 2. Check if it is posted on the GitHub repo* `issues <https://github.com/DigitalMetro/FLX-Library/issues>`_. If not, welcome to submit an issue on GitHub 3. Use the correct channel on the DigitalMetro slack or Wechat group.*
 
     - :raw-html: `<font color="#A52A2A">Does anyone know if there is a trading environment for a single stock? There is one in the docs, but the collab link seems to be broken. </font>`
 
@@ -155,11 +155,11 @@ Outline
 
     - :raw-html:`<font color="#A52A2A">I'm interested, but I know nothing. How should I start? </font>`
 
-    *1. Read the documentation from the very beginning 2. Go through * `tutorials <https://github.com/DigitalMetro/FinRL/tree/master/tutorials>`_ *3. read our papers*
+    *1. Read the documentation from the very beginning 2. Go through * `tutorials <https://github.com/DigitalMetro/FLX/tree/master/tutorials>`_ *3. read our papers*
 
     - :raw-html:`<font color="#A52A2A">What is the development roadmap for the library?  </font>`
 
-	*This is available on our Github repo* https://github.com/DigitalMetro/FinRL-Library
+	*This is available on our Github repo* https://github.com/DigitalMetro/FLX-Library
 
     - :raw-html:`<font color="#A52A2A">How can I contribute to the development?  </font>`
 
@@ -173,13 +173,13 @@ Outline
 
 	*Please read* :ref:`Section-4`
 
-    - :raw-html:`<font color="#A52A2A">What new SOTA models will be incorporated on FinRL?  </font>`
+    - :raw-html:`<font color="#A52A2A">What new SOTA models will be incorporated on FLX?  </font>`
 
-	*Please check our development roadmap at our Github repo: https://github.com/DigitalMetro/FinRL-Library*
+	*Please check our development roadmap at our Github repo: https://github.com/DigitalMetro/FLX-Library*
 
-    - :raw-html:`<font color="#A52A2A">What's the main difference between FinRL and FinRL-Meta?  </font>`
+    - :raw-html:`<font color="#A52A2A">What's the main difference between FLX and FLX-Meta?  </font>`
 
-	*FinRL aims for education and demonstration, while FinRL-Meta aims for building financial big data and a metaverse of data-driven financial RL.*
+	*FLX aims for education and demonstration, while FLX-Meta aims for building financial big data and a metaverse of data-driven financial RL.*
 
 .. _Section-5:
 

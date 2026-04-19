@@ -1,4 +1,4 @@
-:github_url: https://github.com/DigitalMetro/FinRL-Library
+:github_url: https://github.com/DigitalMetro/FLX-Library
 
 Multiple Stock Trading
 ===============================
@@ -10,7 +10,7 @@ Deep Reinforcement Learning for Stock Trading from Scratch: Multiple Stock Tradi
 
     Run the code step by step at `Google Colab`_.
 
-    .. _Google Colab: https://colab.research.google.com/github/DigitalMetro/FinRL/blob/master/FinRL_StockTrading_NeurIPS_2018.ipynb
+    .. _Google Colab: https://colab.research.google.com/github/DigitalMetro/FLX/blob/master/FLX_StockTrading_NeurIPS_2018.ipynb
 
 
 
@@ -59,13 +59,13 @@ Below are the logic chart of multiple stock trading and a made-up example for de
 
 Multiple stock trading is different from single stock trading because as the number of stocks increase, the dimension of the data will increase, the state and action space in reinforcement learning will grow exponentially. So stability and reproducibility are very essential here.
 
-We introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative finance and to develop their own stock trading strategies.
+We introduce a DRL library FLX that facilitates beginners to expose themselves to quantitative finance and to develop their own stock trading strategies.
 
-FinRL is characterized by its reproducibility, scalability, simplicity, applicability and extendibility.
+FLX is characterized by its reproducibility, scalability, simplicity, applicability and extendibility.
 
 This article is focusing on one of the use cases in our paper: Mutiple Stock Trading. We use one Jupyter notebook to include all the necessary steps.
 
-.. image:: ../../image/FinRL-Architecture.png
+.. image:: ../../image/FLX-Architecture.png
 
 
 **Step 1.2: Problem Definition**：
@@ -84,13 +84,13 @@ The algorithm is trained using Deep Reinforcement Learning (DRL) algorithms and 
 The data of the stocks for this case study is obtained from Yahoo Finance API. The data contains Open-High-Low-Close price and volume.
 
 
-**Step 1.3: FinRL installation**：
+**Step 1.3: FLX installation**：
 
 .. code-block::
     :linenos:
 
-    ## install finrl library
-    !pip install git+https://github.com/DigitalMetro/FinRL-Library.git
+    ## install flx library
+    !pip install git+https://github.com/DigitalMetro/FLX-Library.git
 
 Then we import the packages needed for this demonstration.
 
@@ -107,18 +107,18 @@ Then we import the packages needed for this demonstration.
     import datetime
 
     %matplotlib inline
-    from finrl import config
-    from finrl import config_tickers
-    from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
-    from finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-    from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-    from finrl.agents.stablebaselines3.models import DRLAgent
+    from flx import config
+    from flx import config_tickers
+    from flx.meta.preprocessor.yahoodownloader import YahooDownloader
+    from flx.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+    from flx.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+    from flx.agents.stablebaselines3.models import DRLAgent
 
-    from finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+    from flx.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
     from pprint import pprint
 
     import sys
-    sys.path.append("../FinRL-Library")
+    sys.path.append("../FLX-Library")
 
     import itertools
 
@@ -146,9 +146,9 @@ Step 2: Download Data
 Before training our DRL agent, we need to get the historical data of DOW30 stocks first. Here we use the data from Yahoo! Finance.
 Yahoo! Finance is a website that provides stock data, financial news, financial reports, etc. All the data provided by Yahoo Finance is free. yfinance is an open-source library that provides APIs to download data from Yahoo! Finance. We will use this package to download data here.
 
-FinRL uses a YahooDownloader_ class to extract data.
+FLX uses a YahooDownloader_ class to extract data.
 
-.. _YahooDownloader: https://github.com/DigitalMetro/FinRL-Library/blob/master/finrl/marketdata/yahoodownloader.py
+.. _YahooDownloader: https://github.com/DigitalMetro/FLX-Library/blob/master/flx/marketdata/yahoodownloader.py
 
 .. code-block:: python
 
@@ -245,7 +245,7 @@ In practical trading, various information needs to be taken into account, for ex
 
 Risk-aversion reflects whether an investor will choose to preserve the capital. It also influences one's trading strategy when facing different market volatility level.
 
-To control the risk in a worst-case scenario, such as financial crisis of 2007–2008, FinRL employs the financial turbulence index that measures extreme asset price fluctuation.
+To control the risk in a worst-case scenario, such as financial crisis of 2007–2008, FLX employs the financial turbulence index that measures extreme asset price fluctuation.
 
 .. code-block:: python
     :linenos:
@@ -298,9 +298,9 @@ To control the risk in a worst-case scenario, such as financial crisis of 2007�
 
 **Step 3.4 Feature Engineering**
 
-FinRL uses a FeatureEngineer_ class to preprocess data.
+FLX uses a FeatureEngineer_ class to preprocess data.
 
-.. _FeatureEngineer: https://github.com/DigitalMetro/FinRL-Library/blob/master/finrl/preprocessing/preprocessors.py
+.. _FeatureEngineer: https://github.com/DigitalMetro/FLX-Library/blob/master/flx/preprocessing/preprocessors.py
 
 .. code-block: python
 

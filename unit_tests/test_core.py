@@ -6,15 +6,15 @@ from typing import List
 import pandas as pd
 import pytest
 
-from finrl import config
-from finrl import config_tickers
-from finrl.config import DATA_SAVE_DIR
-from finrl.config import RESULTS_DIR
-from finrl.config import TENSORBOARD_LOG_DIR
-from finrl.config import TRAINED_MODEL_DIR
-from finrl.main import check_and_make_directories
-from finrl.meta.preprocessor.preprocessors import FeatureEngineer
-from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
+from flx import config
+from flx import config_tickers
+from flx.config import DATA_SAVE_DIR
+from flx.config import RESULTS_DIR
+from flx.config import TENSORBOARD_LOG_DIR
+from flx.config import TRAINED_MODEL_DIR
+from flx.main import check_and_make_directories
+from flx.meta.preprocessor.preprocessors import FeatureEngineer
+from flx.meta.preprocessor.yahoodownloader import YahooDownloader
 
 
 @pytest.fixture(scope="session")
