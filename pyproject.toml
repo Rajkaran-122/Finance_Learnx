@@ -26,7 +26,7 @@ keywords=["Reinforcement Learning", "Finance", "Quantitative Trading"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-elegantrl = {git="https://github.com/DigitalMetro/ElegantRL.git#egg=elegantrl"}
+elegantrl = {git="https://github.com/AI4Finance-Foundation/ElegantRL.git#egg=elegantrl"}
 alpaca-trade-api = "^3"
 ccxt = "^3"
 jqdatasdk = "^1"

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm finrl python3 -m pytest . -v
+docker run --rm flx python3 -m pytest . -v
