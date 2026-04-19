@@ -1,6 +1,5 @@
 <div align="center">
 
-<img align="center" src=figs/logo_transparent_background.png width="55%"/>
 
 # FLX: Financial Reinforcement Learning
 
